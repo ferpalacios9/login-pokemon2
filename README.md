@@ -1,71 +1,62 @@
-# Getting Started with Create React App
+#  Evaluación técnica Overcast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prueba: **Desarrollador**
 
-## Available Scripts
+Deadline: **36 horas naturales**
 
-In the project directory, you can run:
+Nombre completo: Fernando Palacios 
 
-### `npm start`
+## Clona y crea tu repositorio para la evaluación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-   Clona este repositorio en tu máquina local
+-   Crear un repositorio público en tu cuenta personal de GitHub, BitBucket o Gitlab
+-   Cambia el origen remoto para que apunte al repositorio público que acabas crear en tu cuenta
+-   Coloca tu nombre en este archivo README.md y realiza un push al repositorio remoto  _(este paso es importante, nos ayuda a saber la hora en la que iniciaste tu examen)_
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Prueba
 
-### `npm test`
+La prueba consistirá en construir una API REST (basada en .NET preferentemente, pero puedes utilizar el lenguaje que más te guste) y una aplicación web (ocupando algún framework o librería de JavaScript como por ejemplo Angular, Vue o React), que solucionen los siguientes puntos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Página de inicio de sesión que utilice alguna de estas 3 opciones.
+    - Inicio de sesión de Google
+    - Inicio de sesión de Microsoft (De preferencia)
+    - Inicio de sesión de Facebook
 
-### `npm run build`
+-   Una vez que el usuario inició sesión, el usuario debe poder realizar los siguientes puntos:
+    -   Página de inicio con buscador de pokémones
+    -   Página de perfil del usuairo. Debe contener nombre(s), apellido(s) e imagen. Todos los datos deben ser recolectados del Single Sign On que hayas elegido en el login.
+    -   Conexión a PokéAPI (https://pokeapi.co/)
+    -   Buscar pokémones por nombre
+    -   El resultado de la busqueda tendra que arrojar los siguientes datos:
+        - Id del pokémon (Id)
+        - Nombre del pokémon (name)
+        - 2 Imágenes del pokémon (sprites)
+    -   Funcionalidad para agregar pokémon como favorito dentro de la aplicación web.
+    -   Los favoritos se deben de ver en la página de inicio.
+    -   Poder eliminar favoritos
+    -   
+_Nota: Tu API es la que debe realizar los llamados a la PokéAPI. Para realizar esta prueba es necesario tener una instancia de [SQL Server Developer o SQL Server Express](https://www.microsoft.com/es-mx/sql-server/sql-server-downloads) o de alguna Base de Datos Relacional en tu equipo y compartir en el repositorio los scripts de creación del esquema de la base de datos._
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**La estructura del repositorio debe de tener tres directorios en la raíz, aparte de este README.MD, un directorio para la aplicación web, otro para el API REST y un último para los scripts de la base de datos.**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para la solución de esta prueba es necesario tomar en cuenta:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   Programación Orientada a Objetos
+-   Uso de un ORM (opcional)
+-   Uso de algún framework CSS (opcional)
+-   Agregar la documentación necesaria para compilar, ejecutar y/o desplegar la API y la aplicación web
 
-### `npm run eject`
+----------
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Realiza el push del código y compártenos el link a tu repositorio remoto  😊
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si tienes alguna duda sobre la evaluación puedes mandar un correo electrónico a:
+- rodrigo.mendoza@overcastmx.com
+- rmendoza@overcastmx.com
+- storres@overcastmx.com
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# login-pokemon2
+Manda la liga de tu repositorio público a 
+- alara@overcastmx.com
+- rodrigo.mendoza@overcastmx.com
+- rmendoza@overcastmx.com
+- storres@overcastmx.com
