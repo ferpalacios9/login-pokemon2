@@ -3,8 +3,8 @@ import React from "react";
 import './PageLayout.css'
 
 import { useIsAuthenticated } from "@azure/msal-react";
-import { SignInButton } from "../SignInButton";
-import { SignOutButton } from "../SignOutButton";
+import { SignInButton } from "../Buttons/SignInButton";
+import { SignOutButton } from "../Buttons/SignOutButton";
 import MainContent from "../Profile/Profile";
 
 /*

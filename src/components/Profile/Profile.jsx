@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { loginRequest } from '../../authConfig';
 import { callMsGraph } from '../../graph';
-import { ProfileData } from '../ProfileData';
+import { ProfileData } from '../ProfileData/ProfileData';
 
 import './Profile.css';
 
@@ -39,9 +39,12 @@ const ProfileContent = () => {
             })
     }
 
+    // Verifica si accounts[0] está definido antes de acceder a la propiedad 'name'
+    const accountName = accounts[0] && accounts[0].name;
+
     return (
         <div className='info-container'>
-            <h5 className="card-title">Welcome {accounts[0].name}</h5>
+            <h5 className="card-title">Welcome {accountName}</h5>
             <br />
             {graphData ? (
                 <ProfileData graphData={graphData} email={email} />
@@ -55,7 +58,7 @@ const ProfileContent = () => {
 };
 
 /*
-If a user is authenticated the ProfileContent component above is rendered. Otherwise a message indicating a user is not authenticated is rendered.
+If a user is authenticated the ProfileContent component above is rendered. Otherwise a message indicating a user is not authenticated is rendered. 
 */
 
 const MainContent = () => {

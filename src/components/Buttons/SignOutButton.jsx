@@ -1,11 +1,10 @@
 import React from "react";
 import { useMsal } from "@azure/msal-react";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import Dropdown from "react-bootstrap/Dropdown";
+import Button from 'react-bootstrap/Button';
 
-/**
- * Renders a sign out button 
- */
+/*
+Renders a sign out button 
+*/
 export const SignOutButton = () => {
   const { instance } = useMsal();
 
@@ -17,8 +16,10 @@ export const SignOutButton = () => {
 
 
   return (
-    <button onClick={() => handleLogout()}>
+    <Button
+      variant="primary"
+      onClick={() => handleLogout()}>
       Sign out
-    </button>
+    </Button>
   );
 };
