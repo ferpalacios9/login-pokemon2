@@ -5,11 +5,16 @@ import './PageLayout.css'
 import { useIsAuthenticated } from "@azure/msal-react";
 import { SignInButton } from "../Buttons/SignInButton";
 import { SignOutButton } from "../Buttons/SignOutButton";
+import PokemonButton from "../Buttons/PokemonsButton";
 import MainContent from "../Profile/Profile";
 
+
+import { Routes, Route } from "react-router-dom";
+import Layout from "../../Pages/Layout";
+import PokemonList from "../../Pages/PokemonList";
+
 /*
-Renders the navbar component with a sign in or sign out button depending on whether or not a user is authenticated
-@param props
+If user Sign In it shows MainContent, otherwise it shows Login requirement
 */
 
 export const PageLayout = () => {
@@ -19,8 +24,11 @@ export const PageLayout = () => {
     <>
       {isAuthenticated ?
         <div className="content-section">
-          <MainContent />
-          <SignOutButton />
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route path="/pokemones" element={<PokemonList />}></Route>
+            </Route>
+          </Routes>
         </div> :
         <div className='login-section'>
           <div className='container-login'>
@@ -35,27 +43,3 @@ export const PageLayout = () => {
     </>
   );
 };
-
-/* 
-<>
-      <Navbar bg="primary" variant="dark" className="navbarStyle">
-        <a className="navbar-brand" href="/">
-          Microsoft Identity Platform
-        </a>
-        <div className="collapse navbar-collapse justify-content-end">
-          {isAuthenticated ? <SignOutButton /> : <SignInButton />}
-        </div>
-      </Navbar>
-      <br />
-      <br />
-      <h5>
-        <center>
-          Welcome to the Microsoft Authentication Library For Javascript -
-          React SPA Tutorial
-        </center>
-      </h5>
-      <br />
-      <br />
-      {props.children}
-    </>
-*/

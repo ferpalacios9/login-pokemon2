@@ -3,13 +3,10 @@ import { loginRequest } from '../../authConfig';
 import { callMsGraph } from '../../graph';
 import { ProfileData } from '../ProfileData/ProfileData';
 
-import './Profile.css';
-
 import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 
-
-
 import Button from 'react-bootstrap/Button';
+import './Profile.css';
 
 /*
 * Renders information about the signed-in user or a button to retrieve data about the user
@@ -32,6 +29,9 @@ const ProfileContent = () => {
                     .then((response) => {
                         setGraphData(response);
                         setEmail(accounts[0].username);
+
+                        // Obtenemos la imagen de perfil
+                        // fetchProfileImage(response.accessToken);
                     })
                     .catch((error) => {
                         console.error("Error en la llamada a MS Graph:", error);
@@ -47,7 +47,10 @@ const ProfileContent = () => {
             <h5 className="card-title">Welcome {accountName}</h5>
             <br />
             {graphData ? (
-                <ProfileData graphData={graphData} email={email} />
+                <div className='card-info'>
+                    {/*<img src={profileImage} alt="Profile Image" />*/}
+                    <ProfileData graphData={graphData} email={email} />
+                </div>
             ) : (
                 <Button variant="secondary" onClick={RequestProfileData}>
                     Visualizar Información

@@ -43,7 +43,7 @@
     align-items: center;
     min-height: 100vh;
     background: #313131;
-    gap: 8px;
+    gap: 16px;
 }
 
 @media screen and (max-width: 768px) {
