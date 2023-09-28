@@ -11,13 +11,13 @@ const Layout = () => {
     return (
         <div className="buttons-container">
             <MainContent />
-                <Button 
+            <Button
                 className="pokemon-button"
                 variant="success">
-                    <Link style={{color: "white", textDecoration: "none"}} to="/pokemones" > POKEMONESA </Link>
-                </Button>
+                <Link style={{ color: "white", textDecoration: "none" }} to="/pokemones" > POKEMONES </Link>
+            </Button>
             <SignOutButton />
-            
+            <Outlet />  
         </div>
     )
 }

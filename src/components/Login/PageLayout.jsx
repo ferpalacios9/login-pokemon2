@@ -4,9 +4,9 @@ import './PageLayout.css'
 
 import { useIsAuthenticated } from "@azure/msal-react";
 import { SignInButton } from "../Buttons/SignInButton";
-import { SignOutButton } from "../Buttons/SignOutButton";
-import PokemonButton from "../Buttons/PokemonsButton";
-import MainContent from "../Profile/Profile";
+// import { SignOutButton } from "../Buttons/SignOutButton";
+// import PokemonButton from "../Buttons/PokemonsButton";
+// import MainContent from "../Profile/Profile";
 
 
 import { Routes, Route } from "react-router-dom";
@@ -25,9 +25,8 @@ export const PageLayout = () => {
       {isAuthenticated ?
         <div className="content-section">
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route path="/pokemones" element={<PokemonList />}></Route>
-            </Route>
+            <Route path="/" element={<Layout />}> </Route>
+            <Route path="/pokemones" element={<PokemonList />}></Route>
           </Routes>
         </div> :
         <div className='login-section'>
