@@ -1,0 +1,13 @@
+.data-list {
+    list-style: none;
+}
+
+.data-list li {
+    display: flex;
+    justify-content: initial;
+}
+
+.data-list p {
+    font-weight: bold;
+    margin-right: 8px;
+}
