@@ -1,6 +1,9 @@
-
 h1, p, span {
     color: white;
+}
+
+.exit-button {
+    margin: 16px 0;
 }
 
 .list-pokemons {
